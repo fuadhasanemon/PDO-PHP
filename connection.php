@@ -31,7 +31,11 @@ try {
 
 $rows = $conn->query("select body from posts"); 
 
-while($row = $rows->fetch()) {
+// while($row = $rows->fetch()) {
+//     echo $row['body'] . "<br>";
+// }
+
+foreach($rows as $row) {
     echo $row['body'] . "<br>";
 }
 
